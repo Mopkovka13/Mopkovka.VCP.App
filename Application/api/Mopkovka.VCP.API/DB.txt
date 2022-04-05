@@ -1,0 +1,36 @@
+Volunteer
+	VolunteerId
+	VolunteerFirstName
+	VolunteerLastName
+	Institute
+
+Activity
+	ActivityId
+	ActivityName
+	ActivityDate
+
+VolunteerActivities
+	Id
+	ActivityId
+	VolunteerId
+
+create table dbo.Volunteer(
+	VolunteerId int not null identity(1,1) primary key,
+	VolunteerFirstName nvarchar(500),
+	VolunteerLastName nvarchar(500),
+	Institute nvarchar(500)
+)
+
+
+create table dbo.Activity(
+	ActivityId int not null identity(1,1) primary key,
+	ActivityName nvarchar(500),
+	DateOfActivity datetime
+)
+
+create table dbo.VolunteerActivity(
+	VolunteerId int not null foreign key references dbo.Volunteer(VolunteerId),
+	ActivityId int not null foreign key references dbo.Volunteer(ActivityId),
+	Primary key(VolunteerId, ActivityId)
+)
+	
