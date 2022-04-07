@@ -3,7 +3,7 @@ Volunteer
 	VolunteerFirstName
 	VolunteerLastName
 	Institute
-
+	Activity
 Activity
 	ActivityId
 	ActivityName
