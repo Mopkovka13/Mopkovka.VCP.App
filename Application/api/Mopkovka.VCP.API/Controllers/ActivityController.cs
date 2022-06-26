@@ -16,8 +16,6 @@ namespace Mopkovka.VCP.API.Controllers
         {
             _configuration = configuration;
         }
-
-
         [HttpGet]
         public JsonResult Get()
         {

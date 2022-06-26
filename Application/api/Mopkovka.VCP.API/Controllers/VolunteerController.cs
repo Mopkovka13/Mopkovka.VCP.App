@@ -101,7 +101,7 @@ namespace Mopkovka.VCP.API.Controllers
                     myCommand.Parameters.AddWithValue("@Activity", vol.Activity);
                     myCommand.Parameters.AddWithValue("@Institute", vol.Institute);
                     myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
+                    //table.Load(myReader);
                     myReader.Close();
                     myCon.Close();
                 }

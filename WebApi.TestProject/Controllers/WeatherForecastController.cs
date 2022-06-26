@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mopkovka.VCP.API.Controllers
+namespace WebApi.TestProject.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -38,7 +38,9 @@ namespace Mopkovka.VCP.API.Controllers
         [HttpPost]
         public WeatherForecast[] Post(WeatherForecast[] weathers)
         {
+
             return weathers;
+
         }
     }
 }
